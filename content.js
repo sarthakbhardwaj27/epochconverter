@@ -1,5 +1,10 @@
 function convertEpochToHumanReadable(epoch) {
-    const date = new Date(epoch * 1000);
+    // const date = new Date(epoch * 1000);
+    // return date.toString();
+    // Adjust the time zone offset for IST (GMT+5:30)
+    const offset = 330; // 5 hours and 30 minutes in minutes
+    date.setMinutes(date.getMinutes() + offset);
+
     return date.toString();
   }
   
